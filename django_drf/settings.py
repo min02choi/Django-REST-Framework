@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-3$p8!d3d&k#xw^t-!qc4c9x!9nph3_@80#x*v(1f=b2q)l_!1=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]   # 모든 서버에서 요청을 받을 수 있게 함
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'rest_framework',
+    'accountapp',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# 가장 처음(root)이 되는 파일 설정(기본값 설정)
 ROOT_URLCONF = "django_drf.urls"
 
 TEMPLATES = [
